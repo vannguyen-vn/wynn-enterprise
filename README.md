@@ -7,7 +7,10 @@
 
 ## Start the app
 
-To start the development server run `nx serve wynnresorts`. Open your browser and navigate to http://localhost:4200/. Happy coding!
+To start the development server run 
+`nx serve wynnresorts`. Open your browser and navigate to http://localhost:4200/.
+`nx serve private-access`. Open your browser and navigate to http://localhost:4200/.
+`nx serve profile`. Open your browser and navigate to http://localhost:4200/.
 
 
 ## Generate code
