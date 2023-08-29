@@ -1,2 +1,2 @@
-/wlv/*    https://ebh.netlify.app/:splat
-/ebh/*    https://wlv.netlify.app/:splat
+/wlv/*    https://wlv.netlify.app/:splat    200!
+/ebh/*    https://ebh.netlify.app/:splat    200!
