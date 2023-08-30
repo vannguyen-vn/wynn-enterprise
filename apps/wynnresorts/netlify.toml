@@ -6,3 +6,9 @@
   to = "https://ebh.netlify.app/:splat"
   status = 200
   force = false
+
+[[redirects]]
+  from = "/wlv/*"
+  to = "https://wlv.netlify.app/:splat"
+  status = 200
+  force = false
