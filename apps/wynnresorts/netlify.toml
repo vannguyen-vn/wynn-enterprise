@@ -1,2 +1,8 @@
 [build]
   ignore = "git diff --quiet $CACHED_COMMIT_REF $COMMIT_REF apps/wynnresorts"
+
+[[redirects]]
+  from = "/ebh/*"
+  to = "https://ebh.netlify.app/:splat"
+  status = 200
+  force = false
