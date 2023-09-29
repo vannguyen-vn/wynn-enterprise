@@ -1,0 +1,246 @@
+// ******************************************
+// Global
+// ******************************************
+
+body {
+    font-family: $font-rustica-300;
+    color: var(--txt-color);
+    background-color: var(--bg-color);
+    @include font-size($base-font-size);
+}
+
+a {
+    color: var($--secondary-color);
+    text-decoration: none;
+
+    &:hover {
+        color: var($--secondary-color);
+        text-decoration: underline;
+    }
+}
+
+.red {
+    color: $red;
+}
+//section
+section:not(.banner) {
+    padding-bottom: 60px;
+
+    @include media-size(big-mobile) {
+        padding-bottom: 85px;
+    }
+}
+
+main {
+    padding-top: 32px;
+
+    @include media-size(big-mobile) {
+        padding-top: 96px;
+    }
+}
+.home main, .detail-event main {
+    padding-top: 0px;
+}
+
+.detail-event {
+    .card-text {
+        margin-bottom: 5px;
+    }
+}
+
+.events {
+    .card-text {
+        margin: 5px 0px;
+    }
+}
+    //section
+    .welcome section:not(.banner) {
+        padding-top: 0px;
+        padding-bottom: 40px;
+
+        @include media-size(big-mobile) {
+            padding-bottom: 80px;
+        }
+    }
+    //max container
+    .container {
+        max-width: 1140px !important;
+    }
+    // Heading
+    h1, .h1, h2, .h2 {
+        @include header-style;
+    }
+
+    h1, .h1 {
+        @include font-size-m($font-size-28);
+
+        @include media-size(big-mobile) {
+            @include font-size($font-size-32);
+        }
+    }
+
+    h2, .h2 {
+        @include font-size-m($font-size-28);
+        @include header-style-underline;
+
+        @include media-size(big-mobile) {
+            @include font-size($font-size-32);
+        }
+    }
+
+    h3, .h3 {
+        text-align: left;
+        @include font-size-m($font-size-20);
+        font-family: $font-rustica-500;
+
+        &::after {
+            display: none;
+        }
+    }
+    // CTA Buttons
+    .btn {
+        @include cta-button;
+    }
+
+    .btn-primary {
+        background-color: var(--secondary-color);
+        color: $white;
+
+        &:visited,
+        &:active,
+        &:first-child:active {
+            background-color: var(--secondary-color);
+            border-color: var(--secondary-color);
+        }
+
+        &:hover {
+            background-color: var(--secondary-color-hover);
+            border-color: var(--secondary-color-hover);
+        }
+    }
+
+    .btn-secondary {
+        background-color: $white;
+        color: var(--secondary-color);
+
+        &:visited, &:active {
+            background-color: $white !important;
+            color: var(--secondary-color) !important;
+        }
+
+        &:hover {
+            background-color: var(--secondary-color);
+            color: $white;
+            border-color: var(--secondary-color-hover);
+        }
+    }
+    // Success Notification
+    .successStatus {
+        color: var(--secondary-color-success);
+        position: relative;
+        padding-left: 13px;
+
+        &:after {
+            content: "\2713";
+            position: absolute;
+            top: -3px;
+            left: 0;
+        }
+    }
+
+    .startPoint {
+        position: relative;
+        padding-left: 13px;
+
+        &:after {
+            content: "\2022";
+            position: absolute;
+            top: -6px;
+            left: 0;
+        }
+    }
+
+.dangerStatus {
+    color: $red;
+    position: relative;
+    padding-left: 17px;
+
+    &:after {
+        content: "\F62A";
+        font-family: bootstrap-icons;
+        position: absolute;
+        top: -4px;
+        left: 0;
+        font-size: 14px;
+        color:$red;
+    }
+}
+    // Border bottom
+    .borderB {
+        border-bottom: 1px solid $gray300;
+    }
+
+    .hint {
+        margin-bottom: 0px;
+    }
+
+    .bold {
+        font-family: $font-rustica-500 !important;
+    }
+    /* Chrome, Safari, Edge, Opera */
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+    }
+    /* Firefox */
+    input[type=number] {
+        -moz-appearance: textfield;
+    }
+
+    .form-control.is-valid, .was-validated .form-control:valid, .form-control.is-invalid, .was-validated .form-control:invalid {
+        background-image: none;
+        padding-right: 0px;
+    }
+
+    .fadeInDown {
+        animation-name: fadeInDown;
+    }
+
+    .animated {
+        animation-duration: .5s;
+        animation-fill-mode: both;
+    }
+
+    @keyframes fadeInDown {
+        0% {
+            opacity: 0;
+            transform: translate3d(0, -100%, 0);
+        }
+
+        100% {
+            opacity: 1;
+            transform: translate3d(0, 0, 0);
+        }
+    }
+
+.tel {
+    color: var(--txt-color);
+}
+
+//Hide the Edit on Profile
+
+.Error-internal-server {
+    .account, .navbar {
+        display: none;
+    }
+}
+
+.return-to-private-link {
+    color: $white;
+    text-decoration: underline;
+
+    &:hover {
+        color: $Whiskey-bronze300;
+    }
+}

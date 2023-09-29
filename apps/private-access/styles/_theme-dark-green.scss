@@ -1,0 +1,235 @@
+
+// ******************************************
+// Color Variables for Dark Green
+// ******************************************
+$brown600: $teal800;
+
+// ******************************************
+// Theme
+// ******************************************
+$theme-map-darkGreen: ( $--txt-color: $teal800, $--bg-color: $white, $--primary-color: $teal800, $--secondary-color: $teal800, $--secondary-color-hover: #008475, $--secondary-color-success: $greenSuccess );
+
+// Default: Dark Green theme
+:root {
+    @include spread-map($theme-map-darkGreen);
+}
+
+.darkGreen {
+    .navbar {
+        button.navbar-toggler .hamburger .bar {
+            background-color: $white;
+        }
+
+        button[aria-expanded=true] .hamburger {
+            .bar2, .bar3 {
+                background-color: transparent;
+            }
+        }
+    }
+
+
+    .copy-wrap, .page-title {
+        color: $teal800 !important;
+    }
+
+    .info-box {
+        &:before, &:after {
+            border-color: $teal800;
+        }
+
+        li, a, a:hover {
+            color: $teal800;
+        }
+    }
+
+    .card .card-body {
+        color: $teal800;
+    }
+
+    .benifitList .col .icon, footer .social-icons li a {
+        background-color: $Whiskey-bronze;
+    }
+
+    .events .listEvents .col:before, .events .card {
+        background-color: transparent;
+    }
+
+    .profile .label {
+        color: $teal800;
+    }
+
+    .error-page .sub-header {
+        background-color: transparent;
+    }
+
+    .navbar {
+        background-color: var(--bg-color);
+        box-shadow: 0px 2px 4px rgb(0 0 0 / 15%);
+    }
+
+    .benefits, .meet-the-team {
+        color: $teal800;
+    }
+
+    footer {
+        background-color: $teal500;
+
+        .container a:hover {
+            text-shadow: 2px 3px 7px $Whiskey-bronze, 0 1px 5px $Whiskey-bronze;
+        }
+    }
+}
+
+.welcome.darkGreen {
+    .phoneStyle, .phoneStyle a {
+            color: $dice-w !important;
+    }
+
+    background-color: $teal500;
+    color: $dice-w;
+
+    .borderB {
+        border-color: $dice-w100;
+    }
+
+    h1, h2, h3 {
+        color: $dice-w;
+
+        span a {
+            color: $dice-w;
+        }
+    }
+
+    .sub-header {
+        background-color: transparent;
+    }
+
+    .show-hide {
+        color: $dice-w;
+    }
+
+    .form-label {
+        color: $brown500;
+    }
+
+    .form-control {
+        border-color: $brown500;
+        background-color: rgba(0,0,0,0.21) !important;
+        color: $white;
+    }
+
+    span.red {
+        color: $brown500;
+    }
+
+    .hint.gray, .required .red, .gray {
+        color: $dice-w;
+    }
+
+    .btn {
+        padding: 10px 20px;
+    }
+
+    .btn-primary {
+        background-color: $Whiskey-bronze;
+        border-color: $Whiskey-bronze;
+        color: $blackjack;
+
+        &:hover {
+            background-color: $Whiskey-bronze300;
+        }
+    }
+
+    .btn-secondary {
+        background-color: transparent;
+        color: $dice-w;
+        border-color: $dice-w;
+
+        &:hover {
+            background-color: $Whiskey-bronze300;
+            border-color: $Whiskey-bronze300;
+            color: $blackjack;
+        }
+    }
+
+    .step-item {
+        .step-button {
+            background-color: transparent;
+            color: $brown500;
+            border: 1px solid $brown500;
+        }
+
+        .step-title {
+            color: $brown500;
+        }
+
+        &:not(:last-child) .step-button:after {
+            background-color: $brown500;
+        }
+
+        &.active {
+            .step-button {
+                background-color: $brown500;
+                color: $blackjack;
+            }
+
+            &:not(:last-child) .step-button:after {
+                background-color: $dice-w100;
+            }
+        }
+
+        &.disabled {
+            cursor: not-allowed;
+
+            .step-button {
+                color: $dice-w100;
+                border: 1px solid $dice-w100;
+            }
+
+            .step-title {
+                color: $dice-w100;
+            }
+
+            &:not(:last-child) .step-button:after {
+                background-color: $dice-w100;
+            }
+        }
+    }
+
+    .profile p {
+        color: $dice-w;
+    }
+
+    .step-title-m, .profile .label {
+        color: $brown500;
+    }
+
+    .dropdown:not(.account) .dropdown-toggle:after {
+        filter: invert(100%);
+    }
+
+    .dropdown-menu {
+        background-color: $teal700;
+        border-color: $brown500;
+
+        .dropdown-item {
+            color: $dice-w;
+
+            &:hover, &:active, &:visited {
+                background-color: $teal500;
+            }
+        }
+    }
+
+    .checkTerm {
+        a {
+            color: $dice-w;
+            text-decoration: underline;
+        }
+    }
+}
+
+input:-webkit-autofill,
+input:-webkit-autofill:focus {
+    transition: background-color 600000s 0s, color 600000s 0s;
+}

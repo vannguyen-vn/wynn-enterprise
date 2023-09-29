@@ -1,0 +1,321 @@
+// ******************************************
+// Portal
+// ******************************************
+.load-more {
+    margin-bottom: 46px;
+    text-align: center;
+
+    @include media-size(tablet) {
+        margin-bottom: 55px;
+    }
+
+    .btn {
+        min-width: 140px;
+        padding: 12px 20px;
+    }
+}
+
+//Style for Benefits
+.benifitList {
+    max-width: 736px;
+    margin: 60px auto 0px auto;
+
+    .col {
+        margin-bottom: 20px;
+
+        p {
+            position: relative;
+            padding-left: 25px;
+
+            &:before {
+                content:"";
+                position: absolute;
+                top: 0px;
+                left: 0px;
+                width: 16px;
+                height: 16px;
+                background: url(/images/star-bg.svg) no-repeat center;
+                background-size: cover;
+            }
+        }
+    }
+}
+
+
+// Style Benefits and Meet-the-team section
+.meet-the-team {
+    padding-bottom: 45px !important;
+
+    .description {
+        text-align: center;
+        margin-bottom: 25px;
+
+        @include media-size(tablet) {
+            text-align: left;
+            margin-bottom: 10px;
+        }
+    }
+
+    .content-team {
+        margin-top: 37px;
+    }
+}
+
+.benefits {
+    padding-bottom: 20px !important;
+
+    @include media-size(big-mobile) {
+        padding-bottom: 50px !important;
+    }
+}
+
+.info-box {
+    position: relative;
+    padding: 30px 20px 0px 20px;
+    color: $brown600;
+
+    a {
+        color: $brown600;
+
+        &:hover {
+            color: $brown600;
+            text-decoration: underline;
+        }
+    }
+
+    .tel {
+        text-decoration: underline;
+    }
+
+    &::before,
+    &::after {
+        content: "";
+        width: 100%;
+        height: 4px;
+        border: 1px solid $brown600;
+        position: absolute;
+        left: 0px;
+    }
+
+    &::before {
+        top: 0px;
+    }
+
+    &::after {
+        bottom: 0px;
+    }
+
+    li {
+        list-style: none;
+        color: $brown600;
+        padding-bottom: 25px;
+        padding-left: 30px;
+        position: relative;
+
+        .icon {
+            position: absolute;
+            left: 0px;
+            transform: scale(1.5);
+            top: 5px;
+        }
+
+        .info-title {
+            font-family: $font-rustica-500;
+            text-transform: uppercase;
+            display: block;
+            text-decoration: none;
+        }
+    }
+}
+
+// Style card of Events and Meet-the-team section
+.listCards{
+    margin-top:0px;
+}
+
+.imagelist {
+    margin-bottom: 25px;
+}
+.card-img-top {
+    height:auto;
+}
+
+.card {
+    border: none;
+    width: 100%;
+
+    .card-body {
+        color: $gray700;
+
+        .name {
+            font-family: $font-rustica-500;
+            @include font-size($font-size-16);
+            text-transform: uppercase;
+            margin-bottom: 0px;
+        }
+    }
+}
+// Team member
+.card-member {
+    margin-bottom: 30px;
+
+    @include media-size(big-mobile) {
+        margin-bottom: 50px;
+    }
+
+    .card-body {
+        margin-top: 20px;
+
+        .name {
+            font-family: $font-rustica-500;
+            text-transform: uppercase;
+        }
+
+        p {
+            margin-bottom: 0px;
+        }
+    }
+}
+
+// Event page
+.events {
+    &:first-child {
+        padding-bottom: 15px;
+
+        @include media-size(big-mobile) {
+            padding-bottom: 35px;
+        }
+    }
+
+    .listEvents {
+        align-items: stretch;
+        margin-top: 25px;
+
+        @include media-size(big-mobile) {
+            margin-top: 60px;
+        }
+
+        .col {
+            position: relative;
+            padding-bottom: 50px;
+            margin-bottom: 20px;
+
+            @include media-size(big-mobile) {
+                margin-bottom: 50px;
+            }
+
+            a {
+                color: $gray700;
+                text-decoration: underline;
+
+                &:hover {
+                    color: var(--secondary-color);
+                }
+            }
+
+            &:before {
+                content: "";
+                background-color: $gray100;
+                height: 100%;
+                width: calc(100% - 25px);
+                top: 0;
+                left: 13px;
+                position: absolute;
+                border-radius: 8px;
+            }
+
+            .ctas {
+                position: absolute;
+                left: 30px;
+                bottom: 15px;
+                display: flex;
+                justify-content: space-between;
+                align-items: center;
+                width: calc(100% - 60px);
+            }
+        }
+    }
+
+    .card {
+        margin-top: 0px;
+        background-color: $gray100;
+
+        .card-body {
+
+            .name {
+                color: $black;
+                text-transform: initial;
+            }
+        }
+    }
+}
+// Profile
+.my-profile {
+    .h3{
+        margin-bottom:0px;
+    }
+
+    .h2.marketing-title {
+        margin-bottom: 58px;
+
+        @include media-size(big-mobile) {
+            margin-bottom: 65px;
+        }
+    }
+}
+
+
+//Style for Interested button
+.btn-interested {
+    background-color: $white;
+    border-radius: 40px;
+    padding: 5px 12px 5px 35px;
+    border: 1px solid $teal800;
+    color: $teal800;
+    display: flex;
+    align-items: center;
+    @include font-size($font-size-14);
+    @include transition(all);
+    position: relative;
+
+    &:before {
+        content: "";
+        position: absolute;
+        left: 10px;
+        top: 5px;
+        width: 21px;
+        height: 21px;
+        background: url(/images/star-outline.svg) no-repeat center;
+        background-size: cover;
+    }
+
+    &:hover {
+        transform: scale(1.017);
+    }
+
+    &.active {
+        border-color: $Whiskey-bronze;
+        color: $white;
+        background-color: $teal800;
+
+        &:before {
+            background: url(/images/star-bg.svg) no-repeat center;
+        }
+    }
+}
+
+
+.our-mission {
+    padding-bottom: 65px !important;
+
+    @include media-size(big-mobile) {
+        padding-bottom: 87px !important;
+    }
+}
+
+.addPerson {
+   .last-child{
+        margin-bottom:0px;
+    }
+}
+

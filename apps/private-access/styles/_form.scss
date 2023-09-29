@@ -1,0 +1,212 @@
+// ******************************************
+// Form
+// ******************************************
+.form-control {
+    padding: .688rem .75rem;
+    @include input-style;
+}
+
+.password {
+    position: relative;
+
+    &:first-child {
+        margin-top: 0px;
+
+        @include media-size(big-mobile) {
+            margin-top: 35px;
+        }
+    }
+
+    .show-hide {
+        position: absolute;
+        right: 10px;
+        top: 42px;
+        color: var(--secondary-color);
+        cursor: pointer;
+        font-family: $font-rustica-500;
+    }
+
+    .note {
+        @include font-size($font-size-16);
+    }
+}
+
+#password {
+    .marketing-title {
+        &:after {
+            display: none !important;
+        }
+    }
+}
+
+.modal .note {
+    color: $gray600;
+}
+
+.forgotPass-rememberMe {
+    position: relative;
+
+    .forgotPass {
+        position: absolute;
+        top: 0px;
+        right: 0px;
+
+        a {
+            font-family: $font-rustica-500;
+            text-transform: uppercase;
+            color: var(--txt-color);
+            @include font-size($font-size-12);
+
+            &:hover {
+                color: var(--secondary-color);
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+.welcome .btnSubmit {
+    font-weight:700;
+}
+
+.btnSubmit {
+    width: 100%;
+}
+
+*::placeholder, .gray {
+    color: $gray600;
+    font-family: $font-rustica-300;
+}
+
+.form-label {
+    font-family: $font-rustica-500;
+}
+
+.titleEditPass {
+    display: none;
+}
+
+
+//Style for radio and checkbox
+.phoneCheck > div, .checkTerm {
+    display: inline-block;
+    position: relative;
+
+    input[type=checkbox], input[type=radio] {
+        display: none;
+    }
+
+    > label {
+        position: relative;
+        padding-left: 32px;
+
+        &:before, &:after {
+            position: absolute;
+            top: 7px;
+            left: 2px;
+            margin: 0 8px 0 0;
+            width: 22px;
+            height: 22px;
+        }
+
+        &:before {
+            content: " ";
+            border-radius: 11px;
+            border: 1px solid $brown500;
+            background-color: rgba(0,0,0,0.21);
+        }
+
+        &.radioPhone {
+            &:before, &:after {
+                border-radius: 11px;
+                top:0px;
+            }
+        }
+    }
+
+    &.checked {
+        label:after {
+            content: "\F272";
+            font-family: 'Bootstrap-icons';
+            color: $brown500;
+            background-color: transparent;
+            left: 4px;
+        }
+    }
+
+    input[type=radio]:checked + label:after {
+        width: 14px;
+        height: 14px;
+        top: 4px;
+        left: 6px;
+        content: " ";
+        background-color: $brown500;
+    }
+}
+
+.checkTerm {
+    label {
+        &:before {
+            border-radius: 2px;
+        }
+    }
+
+    &[disabled="true"] {
+        display: none;
+
+        label:after {
+            content: "";
+        }
+    }
+
+    .invalid-check {
+        position: absolute;
+        top: -32px;
+        line-height: 100%;
+        left: 0;
+    }
+}
+
+
+
+.error-mess {
+    color: red;
+}
+
+.form-control.is-invalid {
+    border-color: #dc3545 !important;
+}
+
+.btnSubmit.is-invalid {
+    pointer-events: none;
+}
+
+
+#headingFour {
+    .yourInfo {
+        > .h3 {
+            margin-top: 40px;
+
+            @include media-size(big-mobile) {
+                margin-top: 65px;
+            }
+        }
+    }
+}
+
+.phoneCheck > div  {
+    label {
+        &::before{
+            border-color: $green600;
+            background-color:transparent;
+        }
+        &::after{
+            background-color: $green600;
+        }
+    }
+
+    input[type=radio]:checked + label:after {
+        background-color: $green600;
+    }
+}
+

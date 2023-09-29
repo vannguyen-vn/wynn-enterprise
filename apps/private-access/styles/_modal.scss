@@ -1,0 +1,160 @@
+// ******************************************
+// Modal
+// ******************************************
+.modal.fade:not(.show) {
+    display: none;
+}
+
+.modal-backdrop {
+    background-color: $white;
+    --bs-backdrop-opacity: 1;
+    pointer-events: none;
+}
+
+.modal {
+    background-color: $white;
+    z-index: 9999;
+
+    .logo {
+        text-align: center;
+        //  margin-top: 20px;
+        transform: translateX(0px);
+    }
+
+    .container {
+        position: relative;
+    }
+
+    .modal-body {
+        .modal-content-control {
+            &.show {
+                display: block;
+            }
+        }
+    }
+
+    .titleSetupPass,
+    .newPass {
+        display: none;
+    }
+
+    .titleEditPass {
+        display: block;
+    }
+
+    .close-btn {
+        position: absolute;
+        cursor: pointer;
+        right: 5px;
+        top: 25px;
+        background-color: transparent;
+        border: 0px;
+
+        @include media-size(big-mobile) {
+            right: 10px;
+            top: 35px;
+        }
+
+        img {
+            pointer-events: none;
+            width: 36px;
+            height: 36px;
+            position: relative;
+            @include transition(all);
+        }
+
+        &:after {
+            content: "";
+            position: absolute;
+            font-size: $font-size-14;
+            color: $white;
+            @include transition(all);
+
+            @include media-size(big-mobile) {
+                left: -63px;
+                top: 10px;
+                content: "CLOSE";
+            }
+        }
+
+        &:hover {
+            img {
+                transform: scale(0.95);
+            }
+
+            &:after {
+                left: -61px;
+            }
+        }
+    }
+
+    .modal-content {
+        border: 0px;
+        position: relative;
+
+        .modal-body {
+            margin-top: 30px;
+
+            @include media-size(big-mobile) {
+                margin-top: 50px;
+            }
+        }
+    }
+
+    .modal-dialog {
+        max-width: 100%;
+        --bs-modal-border-radius: 0px;
+        margin: 0px;
+    }
+
+    .btn-close {
+        background: url(/images/icon-close-white.svg) no-repeat;
+        width: 60px;
+        height: 60px;
+        background-size: cover;
+        border: 0px;
+        opacity: 1;
+        border-radius: 0px;
+        padding: 0px !important;
+        position: fixed;
+    }
+
+    .successStatus {
+        color: #518313;
+    }
+}
+
+.Toastify__toast-container{
+    --toastify-toast-width:320px;
+
+    @include media-size(big-mobile) {
+        --toastify-toast-width:484px;
+    }
+}
+.Toastify__toast {
+    @include font-size($font-size-16);
+    width: 100%;
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+    border-radius: 12px;
+
+    @include media-size(big-mobile) {
+        max-width: 484px;
+    }
+
+    .Toastify__toast-body {
+        font-family: $font-rustica-300;
+    }
+    span.name{
+        font-family: $font-rustica-500;
+    }
+    p{
+        margin-bottom: 0px;
+    }
+}
+
+
+.modal-open {
+    #myHeader {
+        display: none;
+    }
+}

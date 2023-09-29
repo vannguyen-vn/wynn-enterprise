@@ -1,0 +1,34 @@
+// ******************************************
+// Theme
+// ******************************************
+// Light mode
+$theme-map-light: (
+    $--txt-color: $black,
+    $--bg-color: $white,
+);
+
+// Override the default light mode
+$theme-map-dark: (
+  $--txt-color: $white,
+  $--bg-color: $black,
+);
+
+//Green theme
+$theme-map-green: (
+  $--primary-color: $brown700,
+  $--secondary-color: $green600,
+  $--secondary-color-hover: #008475,
+  $--secondary-color-success: $greenSuccess,
+);
+
+// Default: light mode && Green theme
+:root {
+  @include spread-map($theme-map-light);
+  @include spread-map($theme-map-green);
+}
+
+.dark {
+  @include spread-map($theme-map-dark);
+}
+
+
